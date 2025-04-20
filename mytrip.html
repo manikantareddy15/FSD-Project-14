@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Trips | Travel Buddy</title>
+  <style>
+    /* Global Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    /* Main Container */
+    .my-trips-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #0077cc;
+      margin-bottom: 20px;
+    }
+
+    /* Trip Card */
+    .trip-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fafafa;
+    }
+
+    .trip-card h3 {
+      margin-bottom: 10px;
+      color: #0077cc;
+    }
+
+    .trip-card p {
+      margin: 5px 0;
+    }
+
+    .trip-actions {
+      margin-top: 15px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      font-size: 0.95em;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .btn-edit {
+      background-color: #ffc107;
+      color: #333;
+    }
+
+    .btn-delete {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn-edit:hover {
+      background-color: #e0a800;
+    }
+
+    .btn-delete:hover {
+      background-color: #c82333;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Trips</h1>
+     </header>
+
+  <main class="my-trips-container">
+    <h2>My Posted Trips</h2>
+
+    <!-- Example Trip Card -->
+    <div class="trip-card">
+      <h3>Trip to Manali, Himachal Pradesh</h3>
+      <p><strong>Date:</strong> May 10 – May 15, 2025</p>
+      <p><strong>Type:</strong> Backpacking</p>
+      <p><strong>Status:</strong> Open for Requests</p>
+      <div class="trip-actions">
+        <button class="btn btn-edit">Edit</button>
+        <button class="btn btn-delete" onclick="confirmDelete()">Delete</button>
+      </div>
+    </div>
+
+    <!-- Another Trip Example -->
+    <div class="trip-card">
+      <h3>Trip to Goa</h3>
+      <p><strong>Date:</strong> June 5 – June 10, 2025</p>
+      <p><strong>Type:</strong> Beach, Relaxation</p>
+      <p><strong>Status:</strong> Closed</p>
+      <div class="trip-actions">
+        <button class="btn btn-edit">Edit</button>
+        <button class="btn btn-delete" onclick="confirmDelete()">Delete</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Buddy</p>
+  </footer>
+
+  <script>
+    function confirmDelete() {
+      const confirmAction = confirm("Are you sure you want to delete this trip?");
+      if (confirmAction) {
+        alert("Trip deleted successfully (functionality can be connected to backend).");
+      }
+    }
+  </script>
+
+</body>
+</html>

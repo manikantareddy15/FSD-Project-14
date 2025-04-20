@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Trip Details | Travel Buddy</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header styling */
+header {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+
+/* Main container */
+.trip-details-container {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* Trip Info Section */
+.trip-info h2 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.trip-info p {
+  margin-bottom: 8px;
+}
+
+.trip-info h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
+  background-color: #e0f0ff;
+  color: #0077cc;
+  padding: 5px 10px;
+  margin-right: 8px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+/* Poster Info Section */
+.poster-info {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Action Section */
+.action-section {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #0077cc;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn-primary:hover {
+  background-color: #005fa3;
+}
+
+.btn-secondary:hover {
+  background-color: #ddd;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #777;
+}
+
+</style>
+
+</head>
+<body>
+  <header>
+    <h1>Trip Details</h1>
+   </header>
+
+  <main class="trip-details-container">
+    <section class="trip-info">
+        <h2>Trip to Manali, Himachal Pradesh</h2>
+      <p><strong>Date:</strong> May 10 – May 15, 2025</p>
+      <p><strong>Duration:</strong> 5 Days</p>
+      <p><strong>Type:</strong> Backpacking, Group Trip</p>
+
+      <h3>Description</h3>
+      <p>We’re planning a budget-friendly adventure to explore the beauty of Manali. Open to 2-3 more buddies. Let’s share travel stories, split costs, and enjoy nature!</p>
+
+      <div class="tags">
+        <span>Adventure</span>
+        <span>Budget</span>
+        <span>Mountains</span>
+      </div>
+    </section>
+
+    <section class="poster-info">
+      <h3>Posted by:</h3>
+      <img src="profile-pic.jpg" alt="User Photo" class="profile-pic" />
+      <p><strong>Name:</strong> Ananya Sharma</p>
+      <a href="profile.html" class="btn">View Profile</a>
+    </section>
+
+    <section class="action-section">
+      <button class="btn-primary">Request to Join Trip</button>
+      <button class="btn-secondary">Send Message</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Buddy</p>
+  </footer>
+</body>
+</html>

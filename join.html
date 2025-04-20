@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Join Trip | Travel Buddy</title>
+  <style>
+    /* Global Reset & Body */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* Header styling */
+    header {
+      background-color: #0077cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    /* Main container */
+    .trip-details-container {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    /* Trip Info */
+    .trip-info {
+      margin-bottom: 20px;
+    }
+
+    .trip-info h2 {
+      color: #0077cc;
+      margin-bottom: 10px;
+    }
+
+    /* Request Form Styling */
+    .request-form {
+      margin-top: 30px;
+      padding: 25px;
+      background-color: #fefefe;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 119, 204, 0.05);
+    }
+
+    .request-form h3 {
+      margin-bottom: 20px;
+      color: #0077cc;
+    }
+
+    .request-form label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .request-form input[type="text"],
+    .request-form input[type="email"],
+    .request-form textarea {
+      width: 80%;
+      max-width: 600px;
+      padding: 12px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: inherit;
+      transition: border 0.3s ease;
+    }
+
+    .request-form input:focus,
+    .request-form textarea:focus {
+      border-color: #0077cc;
+      outline: none;
+    }
+
+    .request-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .btn-primary:hover {
+      background-color: #005fa3;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Join Request Form</h1>
+     </header>
+
+  <main class="trip-details-container">
+    <!-- Trip Summary -->
+    <section class="trip-info">
+      <h2>Join Trip to Manali</h2>
+      <p><strong>Date:</strong> May 10 – May 15, 2025</p>
+      <p><strong>Type:</strong> Backpacking, Group Trip</p>
+      <p><strong>Posted by:</strong> Ananya Sharma</p>
+    </section>
+
+    <!-- Join Form -->
+    <section class="request-form">
+      <h3>Request to Join</h3>
+      <form action="#" method="post" onsubmit="return showConfirmation()">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required /><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required /><br><br>
+
+        <label for="message">Why do you want to join this trip?</label><br>
+        <textarea id="message" name="message" rows="4" placeholder="Write a short message..." required></textarea><br><br>
+
+        <button type="submit" class="btn-primary">Send Request</button>
+      </form>
+    </section>
+
+    <p style="margin-top: 20px; color: #555;">Note: The trip organizer will be notified of your request.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Buddy</p>
+  </footer>
+
+  <script>
+    function showConfirmation() {
+      alert("Your request has been sent successfully!");
+      return true; // Proceed with form submission
+    }
+  </script>
+
+</body>
+</html>
