@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Buddy - Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f0f9ff;
+    }
+
+    nav {
+       position: relative;
+      background-color: #0077b6;
+      color: white;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white !important;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: #ffd60a;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #90e0ef, #caf0f8);
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: #023e8a;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 12px 24px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background-color: #023e8a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0077b6;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <h1>Travel Buddy</h1>
+    <ul>
+        <li><a href="travelhomepage.html">Home</a></li>
+        <li><a href="Register.html">Register/Signup</a></li>
+          <li><a href="trip.html">Trip Details</a></li>
+        
+
+      <li><a href="findbuddy.html">Find a Buddy</a></li>
+      <li><a href="join.html">Join</a></li> 
+      <li><a href="mytrip.html">MyTrips</a></li>
+     
+
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Find Your Perfect Travel Companion</h2>
+    <p>Join Travel Buddy and connect with fellow adventurers who share your travel dreams. Discover destinations, plan trips, and explore together.</p>
+    <button onclick="Explorenow()">Explore Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Travel Buddy. All rights reserved.
+  </footer>
+
+  <script>
+    function Explorenow() {
+      // Redirect to trip planner or another page
+      window.location.href = "explore.html";
+    }
+
+    function navigateTo(section) {
+      alert(`Navigation to '${section}' page is not yet implemented.`);
+    }
+  </script>
+
+</body>
+</html>
