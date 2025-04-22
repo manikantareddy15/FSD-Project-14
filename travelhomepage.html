@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Travel With Buddies</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: lightblue;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute; /* position absolute within navbar */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the logo horizontally */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.book-now {
+  display: inline-block;
+  background-color: white;
+  color: white; /* ensures white text */
+  padding: 10px 15px;
+  text-decoration: none; /* removes underline from <a> */
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero {
+  background-image: url('https://img.freepik.com/premium-photo/full-shot-travel-concept-with-landmarks_1174912-14704.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.hero-content .tag {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #66e0e3;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content .description {
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.learn-more {
+  text-decoration
+</style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Explore The World</div>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="login.html" class="book-now">Login</a>
+
+  </header>
+<center>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Let's Discover The World Together</h1>
+      <p class="description">Live life with no Excuses travel with no regret</p>
+    </div>
+  </section>
+</center>
+</body>
+</html>
