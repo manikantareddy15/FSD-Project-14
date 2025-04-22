@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post a Trip - Travel Buddy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f9ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      margin-top: 60px;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #023e8a;
+    }
+
+    .success {
+      color: green;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Post a Trip</h2>
+    <form id="tripForm">
+      <input type="text" id="destination" placeholder="Destination" required />
+      <input type="date" id="date" required />
+      <textarea id="description" placeholder="Trip Description" rows="4" required></textarea>
+      <select id="preference" required>
+        <option value="">Travel Preference</option>
+        <option value="solo">Solo</option>
+        <option value="group">Group</option>
+        <option value="adventure">Adventure</option>
+        <option value="relaxing">Relaxing</option>
+      </select>
+      <button type="submit">Post Trip</button>
+      <div id="successMessage" class="success"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('tripForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const destination = document.getElementById('destination').value;
+      const date = document.getElementById('date').value;
+      const description = document.getElementById('description').value;
+      const preference = document.getElementById('preference').value;
+
+      if (!destination || !date || !description || !preference) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Simulate success (You can replace this with backend/API call)
+      document.getElementById('successMessage').textContent = "Trip posted successfully!";
+      document.getElementById('tripForm').reset();
+    });
+  </script>
+
+</body>
+</html>
