@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find a Buddy - Travel Buddy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f9ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    input, select {
+      flex: 1 1 30%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #023e8a;
+    }
+
+    .results {
+      margin-top: 30px;
+    }
+
+    .buddy-card {
+      background: #e0f7fa;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border-left: 4px solid #0077b6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Find a Travel Buddy</h2>
+    <form id="searchForm">
+      <input type="text" id="searchDestination" placeholder="Destination">
+      <input type="date" id="searchDate">
+      <select id="searchPreference">
+        <option value="">Preference</option>
+        <option value="solo">Solo</option>
+        <option value="group">Group</option>
+        <option value="adventure">Adventure</option>
+        <option value="relaxing">Relaxing</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="results" id="results">
+      <!-- Search results appear here -->
+    </div>
+  </div>
+
+  <script>
+    const sampleBuddies = [
+      {
+        name: "Alice",
+        destination: "Paris",
+        date: "2025-06-10",
+        preference: "group"
+      },
+      {
+        name: "Bob",
+        destination: "Bali",
+        date: "2025-06-15",
+        preference: "relaxing"
+      },
+      {
+        name: "Charlie",
+        destination: "Paris",
+        date: "2025-06-10",
+        preference: "adventure"
+      }
+    ];
+
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const destination = document.getElementById('searchDestination').value.toLowerCase();
+      const date = document.getElementById('searchDate').value;
+      const preference = document.getElementById('searchPreference').value;
+
+      const filtered = sampleBuddies.filter(buddy => {
+        return (!destination || buddy.destination.toLowerCase().includes(destination)) &&
+               (!date || buddy.date === date) &&
+               (!preference || buddy.preference === preference);
+      });
+
+      const resultsContainer = document.getElementById('results');
+      resultsContainer.innerHTML = '';
+
+      if (filtered.length === 0) {
+        resultsContainer.innerHTML = "<p>No matching travel buddies found.</p>";
+        return;
+      }
+
+      filtered.forEach(buddy => {
+        const card = document.createElement('div');
+        card.className = 'buddy-card';
+        card.innerHTML = `
+          <strong>${buddy.name}</strong><br>
+          Destination: ${buddy.destination}<br>
+          Date: ${buddy.date}<br>
+          Preference: ${buddy.preference}
+        `;
+        resultsContainer.appendChild(card);
+      });
+    });
+  </script>
+
+</body>
+</html>
